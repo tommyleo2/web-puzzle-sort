@@ -1,0 +1,48 @@
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+th, td {
+    border: 1px solid #A2A3A5;
+    padding: 5px
+}
+
+th {
+    background: #021B7F;
+    color: white;
+    text-align: left;
+}
+
+#staff th {
+    width: 160px;
+}
+
+.select {
+    background: #A6AFFC;
+}
+
+.alternate {
+    background: #DDDDDD;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+img {
+    float: right;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
