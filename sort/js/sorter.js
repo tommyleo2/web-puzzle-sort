@@ -11,9 +11,18 @@ function ascend() {
     }
     var sortable = rows.get();
     sortable.sort(function(a, b) {
-        var a_ = $(a);
-        var b_ = $(b);
-        return a_.children().eq(col).text().localeCompare(b_.children().eq(col).text());
+        var a_ = $(a).children().eq(col).text(), b_ = $(b).children().eq(col).text();
+        var isString = false;
+        for (var i = 0; i < a_.length; i++) {
+            if (!(a_[i] >= '0' && a_[i] <= '9' || a_[i] == '.')) {
+                isString = true;
+                break;
+            }
+        }
+        if (isString) {
+            return a_.localeCompare(b_);
+        }
+        return parseInt(a_) - parseInt(b_);
     });
     $(which + " tbody").html("");
     $(which + " tbody").append(sortable);
@@ -32,9 +41,18 @@ function descend() {
     }
     var sortable = rows.get();
     sortable.sort(function(a, b) {
-        var a_ = $(a);
-        var b_ = $(b);
-        return (-1) * a_.children().eq(col).text().localeCompare(b_.children().eq(col).text());
+        var a_ = $(a).children().eq(col).text(), b_ = $(b).children().eq(col).text();
+        var isString = false;
+        for (var i = 0; i < a_.length; i++) {
+            if (!(a_[i] >= '0' && a_[i] <= '9' || a_[i] == '.')) {
+                isString = true;
+                break;
+            }
+        }
+        if (isString) {
+            return b_.localeCompare(a_);
+        }
+        return parseInt(b_) - parseInt(a_);
     });
     $(which + " tbody").html("");
     $(which + " tbody").append(sortable);

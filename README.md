@@ -5,3 +5,7 @@ This homework contains two parts:
 
 Here is the website that the "mysterious" code can apply to.
 --url(https://developer.mozilla.org/en/docs/Web/HTML/Element).
+
+------------------------------------------------------------
+Update log 1.1v:
+  1. Bug fixed: sorting numbers will now not follow the alphabetic rule. Instead, just campare the values.
